@@ -1,4 +1,4 @@
-# password-generator-v2
+# Password Generator-Version 2
 
 ## Project setup
 ```
