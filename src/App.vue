@@ -77,15 +77,18 @@
 
 
 
-      <button class="generate" @click="generate()">Generate</button>
+      <button class="generate" @click="generate(passkeys)">Generate</button>
 
-
+      <div class="custom-area">
+        <input type="text" class="output-input" v-model="customPassKeys" placeholder="Enter a custom password keys">
+        <button class="copy custom-btn" @click="generate(customPassKeys)">Generate from custom keys</button>
+      </div>
 
 
       <span class="error" v-if="errors"><span v-for="(error,index) in errors" :key="index"> {{ error }} <br></span></span>
 
       <div class="output-area">
-        <input type="text" class="output-input" v-model="password">
+        <input type="text" class="output-input" v-model="password" placeholder="Here is your random password">
         <button class="copy" @click="copy()">Copy</button>
       </div>
     </div>
@@ -279,14 +282,26 @@ input{
   padding-left: 5px;
 }
 
+
 .copy{
-  width: 110px;
-  height: 40px;
+  min-width: 110px;
+  min-height: 40px;
+  width: auto;
+  height: auto;
   background: #0069D9;
 }
 
+
 .copy:hover{
   background: #0057ba;
+}
+
+.custom-btn{
+  background: #dc3545;
+}
+
+.custom-btn:hover{
+  background: #bc2e3c;
 }
 
 .error{

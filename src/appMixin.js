@@ -3,6 +3,7 @@ export var appMixin = {
         return {
             password:"Here is your random password",
             passkeys:"",
+            customPassKeys:"",
 
             uppersModel:false,
             lowersModel:false,
@@ -33,14 +34,14 @@ export var appMixin = {
                 this.passkeys += which
             }
         },
-        generate(){
+        generate(k){
             this.errors = []
             var ret = false
             if(this.lengthModel > 99999 || this.lengthModel <=0){
                 this.errors.push("Maximum length is 99999 and minimum length is 1 !")
                 ret = true
             }
-            if(this.passkeys.length < 1){
+            if(k.length < 1){
                 this.errors.push("Please select a password keys!")
                 ret = true
             }
@@ -49,7 +50,7 @@ export var appMixin = {
             }
             this.password = ""
             for(var i = 0;i<this.lengthModel;i++){
-                this.password += this.passkeys[Math.floor(Math.random() * this.passkeys.length)]
+                this.password += k[Math.floor(Math.random() * k.length)]
             }
             document.querySelector(".output-input").focus()
         },

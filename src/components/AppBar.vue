@@ -2,7 +2,7 @@
 
 <div class="app-bar-parent">
   <h1 class="app-bar-text">Password Generator</h1>
-  <h1 class="app-bar-github"><a href="https://github.com/Abdullah-V">Github</a></h1>
+  <h1 class="app-bar-github"><a href="https://github.com/Abdullah-V/Password-Generator-V2" target="_blank">Github</a></h1>
 </div>
 
 </template>
