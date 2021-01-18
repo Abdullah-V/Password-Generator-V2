@@ -1,5 +1,7 @@
 # Password Generator-Version 2
 
+![alt text](https://github.com/Abdullah-V/images/blob/master/password-gen.png)
+
 ## Project setup
 ```
 npm install
